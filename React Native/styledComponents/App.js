@@ -1,6 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
+import { Image, SafeAreaView, StatusBar } from 'react-native';
 import { useEffect, useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Container } from './src/components/Container/Container';
+import { Title, TitleBtnDecrement, TitleBtnIncrement } from './src/components/Title/Title';
+import { BtnDecrement, BtnIncrement } from './src/components/Buttons/Button';
+import { ImageCount } from './src/components/Images/Images';
 
 export default function App() {
 
@@ -20,45 +24,28 @@ export default function App() {
     console.warn(`Contador atualizado ${count}`)
   }, [count])
   return (
-    <View style={styles.container}>
-      <Text>Contador: {count}</Text>
-      <TouchableOpacity style={styles.incrementButton} onPress={increment}>
-        <Text style={styles.title}>Incrementar</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.decrementButton} onPress={decrement}>
-        <Text style={styles.title}>Decrementar</Text>
-      </TouchableOpacity>
+    <Container>
+
+      <ImageCount
+        source={{
+          uri: 'https://png.pngtree.com/png-clipart/20231018/original/pngtree-smart-accountant-transparent-background-png-image_13354545.png',
+        }}
+      />
+      {/* Title */}
+      <Title>Contador: {count}</Title>
+
+      {/* BtnIncrement */}
+      <BtnIncrement onPress={increment}>
+        {/* TitleBtnIncrement */}
+        <TitleBtnIncrement>Incrementar</TitleBtnIncrement>
+      </BtnIncrement>
+
+      {/* BtnDecrement */}
+      <BtnDecrement onPress={decrement}>
+        {/* TitleBtnDecrement */}
+        <TitleBtnDecrement>Decrementar</TitleBtnDecrement>
+      </BtnDecrement>
       <StatusBar style="auto" />
-    </View>
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  incrementButton: {
-    justifyContent:'center',
-    alignItems: 'center',
-    width: 90,
-    height: 35,
-    backgroundColor: '#66ff66',
-    borderRadius: 5,
-    marginTop: 20,
-  },
-  decrementButton: {
-    justifyContent:'center',
-    alignItems: 'center',
-    width: 90,
-    height: 35,
-    backgroundColor: '#ff6666',
-    borderRadius: 5,
-    marginTop: 10,
-  },
-  title: {
-    color: 'white'
-  }
-});
