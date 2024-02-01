@@ -8,34 +8,24 @@ import {
 } from '@expo-google-fonts/dev';
 import { Header } from './src/components/Header';
 import { ContainerApp } from './style';
+import { Home } from './screens/Home';
 
 
 export default function App() {
-  let [fontsLoaded] = useFonts({
+  let [fontsLoaded, fontError] = useFonts({
     Roboto_500Medium,
     Roboto_700Bold,
   });
 
-  if (!fontsLoaded) {
-    return <AppLoading />;
+  if (!fontsLoaded && !fontError) {
+    return null;
   } else {
     return (
       <ContainerApp>
-        <StatusBar translucent backgroundColor='transparent'/>
+        <StatusBar translucent backgroundColor='transparent' barStyle='light'/>
         <Header />
+        <Home/>
       </ContainerApp>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  titleTest: {
-    fontFamily: 'Roboto_700Bold',
-  }
-});
