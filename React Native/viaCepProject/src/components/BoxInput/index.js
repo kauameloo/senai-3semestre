@@ -19,7 +19,7 @@ export const BoxInput = ({
             <Input
             editable={editable}
             placeholder={placeholder}
-            value={fieldValue}
+            fieldValue={fieldValue}
             onChangeText={onChangeText}
             keyType={keyType}
             maxLength={maxLength}

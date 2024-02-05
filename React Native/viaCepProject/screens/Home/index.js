@@ -1,20 +1,89 @@
 import { View } from "react-native";
 import { BoxInput } from "../../src/components/BoxInput";
 import { ContainerForm, EstadoUFFlex, ScrollForm } from "./style";
-import { Axios } from "axios";
-
-async function buscaCep() {
-    // const userCEP = ;
-    const url = `https://viacep.com.br/ws/${userCEP}/json/` ;
-
-    try {
-        const promise = await fetch(url);
-    } catch (error) {
-        console.warn('Erro na API')
-    }
-}
+import { useEffect, useState } from "react";
+import axios from "axios";
+import api from "../../services/Services";
 
 export function Home() {
+
+    const [cep, setCep] = useState('');
+    const [logradouro, setLogradouro] = useState('')
+    const [bairro, setBairro] = useState('')
+    const [cidade, setCidade] = useState('')
+    const [estado, setEstado] = useState('')
+    const [uf, setUF] = useState('')
+
+
+
+    // useEffect(() => {
+
+    //     const buscaCep = async () => {
+    //         try {
+    //             const promise = await api.get(`${cep}/json/`);
+
+    //             setLogradouro(promise.data.logradouro);
+    //             setBairro(promise.data.bairro);
+    //             setCidade(promise.data.localidade);
+    //             setUF(promise.data.uf);
+
+
+    //             //const estado = await axios.get(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${promise.data.uf}`)
+
+    //             console.log(promise.data);
+    //             setEstado(estado.data.nome)
+    //         } catch (error) {
+    //             console.log('Erro na API', error);
+    //         }
+
+    //         buscaCep();
+    //     }
+    // }, [cep])
+
+    useEffect(() => {
+
+        const getCep = async () => {
+            if (cep !== "" && cep.length === 8) {
+                try {
+                    const response = await api.get(`${cep}/json/`);
+                    if (response.data) {
+
+                        setLogradouro(response.data.logradouro);
+                        setBairro(response.data.bairro);
+                        setCidade(response.data.localidade);
+                        setUF(response.data.uf);
+
+                        const estado = await axios.get(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${response.data.uf}
+
+                        `)
+
+                        setEstado(estado.data.nome);
+
+                    } else {
+
+                        alert("Verifique o CEP digitado !!!");
+
+                    }
+                    console.log(response.data)
+                } catch (error) {
+
+                    console.log("Ocorreu um erro ao buscar o CEP", error);
+
+                }
+            }
+        };
+        if (cep.length < 8) {
+            setLogradouro('');
+            setBairro('');
+            setCidade('');
+            setUF('');
+            setEstado('');
+        }
+        getCep();
+
+    }, [cep]);
+
+
     return (
         <>
             <ScrollForm>
@@ -25,44 +94,46 @@ export function Home() {
                         keyType="numeric"
                         maxLength={9}
                         editable={true}
+                        onChangeText={(e) => setCep(e)}
+                        fieldValue={cep}
                     />
                     <BoxInput
                         textLabel={'Logradouro'}
                         placeholder={'Logradouro...'}
-                        keyType="text"
                         maxLength={40}
-                        editable={true}
+
+                        fieldValue={logradouro}
                     />
                     <BoxInput
                         textLabel={'Bairro'}
                         placeholder={'Bairro...'}
-                        keyType="text"
                         maxLength={30}
-                        editable={true}
+
+                        fieldValue={bairro}
                     />
                     <BoxInput
                         textLabel={'Cidade'}
                         placeholder={'Cidade...'}
-                        keyType="text"
                         maxLength={20}
-                        editable={true}
+
+                        fieldValue={cidade}
                     />
                     <EstadoUFFlex>
                         <BoxInput
                             textLabel={'Estado'}
                             placeholder={'Estado...'}
-                            keyType="text"
                             maxLength={15}
-                            editable={true}
+
                             fieldWidth={70}
+                            fieldValue={estado}
                         />
                         <BoxInput
                             textLabel={'UF'}
                             placeholder={'UF...'}
-                            keyType="text"
                             maxLength={2}
-                            editable={true}
+
                             fieldWidth={24}
+                            fieldValue={uf}
                         />
                     </EstadoUFFlex>
                 </ContainerForm>
