@@ -16,5 +16,4 @@ export const TextLink = styled.Text`
 export const TextLinkAccount = styled(TextLink)`
     text-decoration: underline;
     color: #4D659D;
-
 `

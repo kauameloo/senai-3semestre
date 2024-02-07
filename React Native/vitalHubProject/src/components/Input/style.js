@@ -12,3 +12,10 @@ export const InputText = styled.TextInput`
     color: #49B3BA;
     font-family: 'MontserratAlternates_600SemiBold';
 `
+
+export const InputNumberText = styled(InputText)`
+    font-family: 'Quicksand_600SemiBold';
+    color: #34898F;
+    width: 15%;
+    text-align: center;
+`

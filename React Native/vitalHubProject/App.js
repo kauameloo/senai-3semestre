@@ -11,11 +11,14 @@ import {
 } from '@expo-google-fonts/dev';
 import { Botao } from './src/components/Button/style';
 import { TitleBtn, TitleBtnGoogle } from './src/components/Title/style';
-import { BotaoGoogle } from './src/components/GoogleButton/style';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { Navegacao } from './screens/Navegacao';
 import { Login } from './screens/Login';
+import { ForgotPassword } from './screens/ForgotPassword';
+import { VerifyEmail } from './screens/VerifyEmail';
+import { ResetPassword } from './screens/ResetPassword';
+import { CreateAccount } from './screens/CreateAccount';
 
 
 const Stack = createNativeStackNavigator();
@@ -53,6 +56,26 @@ export default function App() {
             name='Login'
             component={Login}
             options={{ title: 'Login' }}
+          />
+          <Stack.Screen
+            name='ForgotPassword'
+            component={ForgotPassword}
+            options={{ title: 'ForgotPassword' }}
+          />
+          <Stack.Screen
+            name='VerifyEmail'
+            component={VerifyEmail}
+            options={{ title: 'VerifyEmail' }}
+          />
+          <Stack.Screen
+            name='ResetPassword'
+            component={ResetPassword}
+            options={{ title: 'ResetPassword' }}
+          />
+          <Stack.Screen
+            name='CreateAccount'
+            component={CreateAccount}
+            options={{ title: 'CreateAccount' }}
           />
         </Stack.Navigator>
       </NavigationContainer>
