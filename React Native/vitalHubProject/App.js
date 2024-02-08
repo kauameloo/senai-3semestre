@@ -19,6 +19,7 @@ import { ForgotPassword } from './screens/ForgotPassword';
 import { VerifyEmail } from './screens/VerifyEmail';
 import { ResetPassword } from './screens/ResetPassword';
 import { CreateAccount } from './screens/CreateAccount';
+import { PatientProfile } from './screens/PatientProfile';
 
 
 const Stack = createNativeStackNavigator();
@@ -76,6 +77,11 @@ export default function App() {
             name='CreateAccount'
             component={CreateAccount}
             options={{ title: 'CreateAccount' }}
+          />
+          <Stack.Screen
+            name='PatientProfile'
+            component={PatientProfile}
+            options={{ title: 'PatientProfile' }}
           />
         </Stack.Navigator>
       </NavigationContainer>

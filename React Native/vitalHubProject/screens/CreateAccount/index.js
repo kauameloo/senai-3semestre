@@ -2,10 +2,11 @@ import { Botao } from "../../src/components/Button/style";
 import { Container } from "../../src/components/Container/style";
 import { Input } from "../../src/components/Input";
 import { Logo } from "../../src/components/Logo/style";
-import { Code } from "../../src/components/Subtitle/style";
+import { CancelLink } from "../../src/components/Subtitle";
+import { Cancel, Code } from "../../src/components/Subtitle/style";
 import { Subtitle, TitleBtn, TitleLarge } from "../../src/components/Title/style";
 
-export function CreateAccount() {
+export function CreateAccount({navigation}) {
     return (
         <>
             <Container>
@@ -18,7 +19,7 @@ export function CreateAccount() {
                 <Botao>
                     <TitleBtn>Cadastrar</TitleBtn>
                 </Botao>
-                <Code>Cancelar</Code>
+                <CancelLink onPress={() => {navigation.navigate("Login")}}/>
             </Container>
         </>
     )

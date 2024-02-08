@@ -3,21 +3,21 @@ import { TextLink, TextLinkAccount, TextLinkMedium } from "./style"
 import { Linking } from "react-native"
 
 export const LinkMedium = ({
-    url
+    onPress
 }) => {
     return (
         <ViewBox>
             <TextLinkMedium
-                onPress={() => { Linking.openURL(`${url}`) }}
+                onPress={onPress}
             >Esqueceu sua senha!</TextLinkMedium>
         </ViewBox>
     )
 }
 
 export const LinkAccount = ({
-    url
+    onPress
 }) => {
     return (
-        <TextLink>Não tem uma conta? <TextLinkAccount onPress={() => { Linking.openURL(`${url}`) }}>Crie uma conta agora!</TextLinkAccount></TextLink>
+        <TextLink>Não tem uma conta? <TextLinkAccount onPress={onPress}>Crie uma conta agora!</TextLinkAccount></TextLink>
     )
 }

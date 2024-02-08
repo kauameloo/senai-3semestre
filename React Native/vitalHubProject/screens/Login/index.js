@@ -7,7 +7,7 @@ import { TitleBtn, TitleBtnGoogle, TitleLarge } from "../../src/components/Title
 import { AntDesign } from '@expo/vector-icons';
 
 
-export function Login() {
+export function Login({navigation}) {
 
     return (
         <>
@@ -16,7 +16,7 @@ export function Login() {
                 <TitleLarge>Entrar ou criar conta</TitleLarge>
                 <Input placeholder={'Usuário ou E-mail'} placeholderTextColor={"#49B3BA"} />
                 <Input placeholder={'Senha'} placeholderTextColor={"#49B3BA"} secureTextEntry={true} />
-                <LinkMedium url={'https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/09/GettyImages-1668971338-e1694439970587.jpg?w=1220&h=674&crop=1'} />
+                <LinkMedium onPress={() => {navigation.navigate("ForgotPassword")}}/>
                 <Botao>
                     <TitleBtn>Entrar</TitleBtn>
                 </Botao>
@@ -26,7 +26,7 @@ export function Login() {
                     <TitleBtnGoogle>Entrar com google</TitleBtnGoogle>
                 </BotaoGoogle>
 
-                <LinkAccount />
+                <LinkAccount onPress={() => {navigation.navigate("CreateAccount")}} />
             </Container>
         </>
     )

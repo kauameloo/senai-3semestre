@@ -1,4 +1,4 @@
-import { InputNumberText, InputText } from "./style"
+import { InputNumberText, InputText, InputTextProfile } from "./style"
 
 export const Input = ({
     editable, 
@@ -23,6 +23,32 @@ export const Input = ({
         />
     )
 }
+
+
+export const InputProfile = ({
+    editable, 
+    placeholder, 
+    fieldValue, 
+    onChangeText, 
+    keyType,
+    maxLength,
+    placeholderTextColor,
+    secureTextEntry = false,
+}) => {
+    return (
+        <InputTextProfile
+            placeholder={placeholder}
+            editable={editable}
+            keyboardType={keyType}
+            value={fieldValue}
+            maxLength={maxLength}
+            onChangeText={onChangeText}
+            placeholderTextColor={placeholderTextColor}
+            secureTextEntry={secureTextEntry}
+        />
+    )
+}
+
 
 export const InputNumber = ({
     editable, 
