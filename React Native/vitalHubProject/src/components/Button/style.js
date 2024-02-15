@@ -10,6 +10,11 @@ export const Botao = styled.TouchableOpacity`
     margin-top: 30px;
 `
 
+export const BotaoSair = styled(Botao)`
+    width: 40%;
+    background-color: #ACABB7;
+`
+
 export const BotaoGoogle = styled(Botao)`
     border: 1px solid #496BBA;
     background-color: white;

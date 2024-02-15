@@ -13,6 +13,11 @@ export const InputText = styled.TextInput`
     font-family: 'MontserratAlternates_600SemiBold';
 `
 
+export const InputBigText = styled(InputText)`
+    height: 121px;
+    padding-bottom: 82px;
+`
+
 export const InputTextProfile = styled(InputText)`
     border: none;
     background-color: #F5F3F3;

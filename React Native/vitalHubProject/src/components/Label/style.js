@@ -6,4 +6,6 @@ export const InputLabel = styled.Text`
     color: #33303E;
     text-align: left;
     margin-bottom: 10px;
+    align-self: flex-start;
+    margin-left: 5%;
 `
