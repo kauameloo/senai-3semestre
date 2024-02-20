@@ -1,6 +1,7 @@
 
-import { BoxCard, BoxDateCancel, BoxTextCard } from "../Container/StyleContainer"
+import { BoxCard, BoxDateCancel, BoxTextCard, BoxTextDoctorCard } from "../Container/StyleContainer"
 import { ConsultDate, ConsultDateGrey } from "../DateConsult/StyleDateConsult"
+import { CardCancel, SeeRecord } from "../Descriptions/Descriptions"
 import { AgeTextCard, CancelCard, DescripritionForgot, DoctorArea, HourText, HourTextGrey, RoutineTextCard, SeeMedicalRecord } from "../Descriptions/StyledDescriptions"
 import { ImageCard, PointCard } from "../Images/StyleImages"
 import { NameCard, NameCardSelect, Title } from "../Title/StyleTitle"
@@ -26,7 +27,7 @@ export const Card = ({ url, name, age, routine, hour, status }) => {
 
                     </ConsultDate>
 
-                    <CancelCard>Cancelar</CancelCard>
+                    <CardCancel text={'Cancelar'} onPressCancel={''}/>
 
                 </BoxDateCancel>
             )
@@ -44,7 +45,7 @@ export const Card = ({ url, name, age, routine, hour, status }) => {
 
                     </ConsultDateGrey>
 
-                    <SeeMedicalRecord>Ver Prontuario</SeeMedicalRecord>
+                    <SeeRecord text={'Ver prontuario'} onPressAppointment={''}/>
 
                 </BoxDateCancel>
             )
@@ -127,11 +128,11 @@ export const CardSelectDoctor = ({ url, name, doctorArea }) => {
 
             <BoxCard>
 
-                <BoxTextCard>
+                <BoxTextDoctorCard>
                     <NameCardSelect>{name}</NameCardSelect>
 
                     <DoctorArea>{doctorArea}</DoctorArea>
-                </BoxTextCard>
+                </BoxTextDoctorCard>
 
             </BoxCard>
 

@@ -65,7 +65,7 @@ export const AgeTextCard = styled(DescripritionForgot)`
 export const DoctorArea = styled(DescripritionForgot)`
     color: #8C8A97;
     font-size: 14px;
-    height: 18px;   
+    height: 20px;   
     width: 49%;
     align-self: flex-start; 
     text-align: flex-start; 
@@ -89,8 +89,7 @@ export const HourTextGrey = styled(HourText)`
 `
 
 export const CancelCard = styled.Text`
-    margin-top: 3%;
-    margin-left: 32%;
+    /* margin-left: 32%; */
     font-family: MontserratAlternates_500Medium;
     color: #C81D25;
     font-size: 14px;

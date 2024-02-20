@@ -7,9 +7,8 @@ export const Header = styled(LinearGradient).attrs({
     start: { x: 0, y: 0 },
     end: { x: 1, y: 0 },
 })`
-    padding-top:25px;
     width: 100%;
-    height: 125px;
+    height: 115px;
     background-color: #FF99CC;
     border-radius: 0px 0px 22px 22px;
     box-shadow: 0px 1px 5px black ;

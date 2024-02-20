@@ -9,6 +9,9 @@ export const CardContainer = styled.SafeAreaView`
     width: 90%;
     height: 105px;
     flex-direction: row;
+    align-self: center;
+    align-items: center;
+
 `
 
 export const AgeCard = styled.SafeAreaView`
