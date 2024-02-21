@@ -27,6 +27,13 @@ export const LargeButton= styled(NormalButton)`
     margin-top: 0px;
     margin-bottom: 30px;
 `
+
+export const LargeButtonModal= styled(NormalButton)`
+    width: 91%;
+    height: 52px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+`
 export const ButtonBlocked = styled(NormalButton)`
     background-color: #ACABB7;
     border-color: #ACABB7;

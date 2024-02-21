@@ -9,9 +9,13 @@ import Calendar from "../../components/Calendar/Calendar"
 import { FilterButton } from "../../components/Button/Button"
 import { useState } from "react"
 import { Card } from "../../components/Cards/Cards"
+import { CancelationModal } from "../../components/CancelationModal/CancelationModal"
 
 
 export const DoctorConsultation = () => {
+
+    const [showModalCancel, setShowModalCancel] = useState(false);
+    const [showModalAppointment, setShowModalAppointment] = useState(false);
 
     const [selected, setSelected] = useState({
         agendadas: true,
@@ -68,58 +72,58 @@ export const DoctorConsultation = () => {
 
     return (
 
-            <Container>
-                <Header>
+        <Container>
+            <Header>
 
-                    <StatusBar translucent backgroundColor="transparent" />
+                <StatusBar translucent backgroundColor="transparent" />
 
-                    <BoxHome>
+                <BoxHome>
 
-                        <ImagemHome source={require('../../assets/DoctorImage.png')} />
+                    <ImagemHome source={require('../../assets/DoctorImage.png')} />
 
-                        <BoxDataHome>
-                            <WelcomeTitle textTitle={"Bem vindo"} />
+                    <BoxDataHome>
+                        <WelcomeTitle textTitle={"Bem vindo"} />
 
-                            <NameTitle textTitle={"Dr. Claudio"} />
-                        </BoxDataHome>
+                        <NameTitle textTitle={"Dr. Claudio"} />
+                    </BoxDataHome>
 
-                    </BoxHome>
-
-
-                    <MoveIconBell>
-                        <Ionicons name="notifications" size={25} color="white" />
-                    </MoveIconBell>
-
-                </Header>
+                </BoxHome>
 
 
+                <MoveIconBell>
+                    <Ionicons name="notifications" size={25} color="white" />
+                </MoveIconBell>
 
-                <Calendar />
+            </Header>
 
-                <ButtonHomeContainer>
 
-                    <FilterButton onPress={() => { setSelected({ agendadas: true }) }} selected={selected.agendadas} text={'Agendadas'} />
 
-                    <FilterButton onPress={() => { setSelected({ realizadas: true }) }} selected={selected.realizadas} text={'Realizadas'} />
+            <Calendar />
 
-                    <FilterButton onPress={() => { setSelected({ canceladas: true }) }} selected={selected.canceladas} text={'Canceladas'} />
+            <ButtonHomeContainer>
 
-                </ButtonHomeContainer>
+                <FilterButton onPress={() => { setSelected({ agendadas: true }) }} selected={selected.agendadas} text={'Agendadas'} />
 
-                <FlatContainer
-                    data={data}
-                    renderItem={({ item }) =>
-                        <Card hour={item.hour} name={item.name} age={item.age} routine={item.routine} url={image} status={item.status} />}
-                    keyExtractor={item => item.id}
-                />
+                <FilterButton onPress={() => { setSelected({ realizadas: true }) }} selected={selected.realizadas} text={'Realizadas'} />
 
-                {/* <Card url={require('../../assets/ImageCard.png')} name={"Niccole Sarge"} age={"22 anos"} routine={"Rotina"} hour={"14:00"}/>
+                <FilterButton onPress={() => { setSelected({ canceladas: true }) }} selected={selected.canceladas} text={'Canceladas'} />
 
-                <Card url={require('../../assets/ImageCardMale.png')} name={"Richard Kosta"} age={"28 anos"} routine={"Urgência"} hour={"15:00"}/>
+            </ButtonHomeContainer>
 
-                <Card url={require('../../assets/ney.webp')} name={"Neymar Jr"} age={"33 anos"} routine={"Rotina"} hour={"17:00"}/> */}
+            <FlatContainer
+                data={data}
+                renderItem={({ item }) =>
+                    <Card hour={item.hour} name={item.name} age={item.age} routine={item.routine} url={image} status={item.status} onPressCancel={() => setShowModalCancel(true)} onPressAppointment={() => setShowModalAppointment(true)} />}
+                keyExtractor={item => item.id}
+            />
 
-            </Container>
+            {/* modal cancelar */}
+            <CancelationModal
+                visible={showModalCancel}
+                setShowModalCancel={setShowModalCancel}
+            />
+
+        </Container>
 
 
     )
