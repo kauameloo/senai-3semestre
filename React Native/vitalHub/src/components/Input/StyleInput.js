@@ -51,4 +51,3 @@ export const InputHigh = styled(InputText)`
 export const InputTextLarge = styled(InputText)`
     width: 90%;
 `
-

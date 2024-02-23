@@ -9,7 +9,12 @@ export const Title = styled.Text`
 `
 
 export const TitleModal = styled(Title)`
-    margin-bottom: none;
+    margin-bottom: 0px;
+`
+
+export const TitleModalRecord = styled(TitleModal)`
+    margin-bottom: 18px;
+    margin-top: 30px;
 `
 
 export const TitleProfile = styled(Title)`
@@ -18,12 +23,13 @@ export const TitleProfile = styled(Title)`
 
 export const TitleName = styled.Text`
     font-family: MontserratAlternates_600SemiBold;
+    align-self: flex-start;
     font-size: 16px;
     color: #FBFBFB;
 `
 
 export const TitleWelcome = styled.Text`
-    margin-right: 24px;
+    align-self: flex-start;
     font-family: Quicksand_600SemiBold;
     font-size: 14px;
     color: #4E4B59;
@@ -54,4 +60,8 @@ export const NameCardSelect = styled.Text`
     margin-bottom: 6px;
     align-self: flex-start;
     color: #33303E;
+`
+
+export const NameCardClinic = styled(NameCardSelect)`
+    margin-top: 3%;
 `

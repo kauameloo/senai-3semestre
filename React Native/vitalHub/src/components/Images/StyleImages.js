@@ -10,6 +10,11 @@ export const LogoCreateAccount = styled.Image`
     margin-top: 22%;
 `
 
+export const ImageModalRecord = styled.Image`
+    width: 285px;
+    height: 181px;
+`
+
 export const Seta = styled.Image`
 margin-right: 320px;
 margin-top: 100px;
@@ -40,10 +45,10 @@ export const IconBell = styled.Image`
 
 export const ImageCard = styled.Image`
     width: 80px;
-    height: 80px;
-    border-radius: 5px;
+    height: 86px;
+    border-radius: 6px;
 `
 
 export const PointCard = styled.Image`
-    margin-bottom: 12%;
+    margin-bottom: 5px;
 `

@@ -24,4 +24,8 @@ export const WhiteButtonText = styled(ButtonTextHome)`
     color: #607EC5;
 `
 
+export const WhiteButtonTextStet = styled(WhiteButtonText)`
+    color: #34898F;
+`
+
 

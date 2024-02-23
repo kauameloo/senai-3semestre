@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 
-export const NormalButton= styled.TouchableOpacity`
+export const NormalButton = styled.TouchableOpacity`
     margin-top: 32px;
     border-radius: 8px;
     width: 80%;
@@ -13,7 +13,7 @@ export const NormalButton= styled.TouchableOpacity`
     border-color: #496BBA;
     `
 
-export const GoogleButton= styled(NormalButton)`
+export const GoogleButton = styled(NormalButton)`
     margin-top: 20px; 
     gap: 27px;
     justify-content: center;
@@ -21,17 +21,10 @@ export const GoogleButton= styled(NormalButton)`
     background-color: #fff;
 `
 
-export const LargeButton= styled(NormalButton)`
+export const LargeButton = styled(NormalButton)`
     width: 91%;
     height: 52px;
     margin-top: 0px;
-    margin-bottom: 30px;
-`
-
-export const LargeButtonModal= styled(NormalButton)`
-    width: 91%;
-    height: 52px;
-    margin-top: 30px;
     margin-bottom: 30px;
 `
 export const ButtonBlocked = styled(NormalButton)`
@@ -58,13 +51,29 @@ export const ButtonHome = styled.TouchableOpacity`
     margin-bottom: 10px;
 `
 
+export const ButtonHomeStet = styled(ButtonHome)`
+    width: 88px;
+    background-color: #60BFC5;
+    border: 1px solid #60BFC5;
+    margin-top: 0;
+    margin-bottom: 0;
+    `
+
 export const WhiteButtonHome = styled(ButtonHome)`
     background-color: #FBFBFB;
     border: 2px solid #607EC5;
+
 `
-export const LargeButtonSelect= styled(LargeButton)`
+
+export const WhiteButtonHomeStet = styled(WhiteButtonHome)`
+    border: 1px solid #60BFC5;
+    width: 88px;
+    margin-top: 0;
+    margin-bottom: 0;
+`
+export const LargeButtonSelect = styled(LargeButton)`
     width: 91%;
-    height: 52px;
+    height: 50px;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 `

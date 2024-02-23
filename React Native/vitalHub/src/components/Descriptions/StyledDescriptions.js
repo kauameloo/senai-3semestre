@@ -12,6 +12,10 @@ export const DescripritionForgot = styled.Text`
     align-self: center;
 `
 
+export const DescriptionModalRecord = styled(DescripritionForgot)`
+    font-size: 14px;
+`
+
 export const DescripritionEmail = styled.Text`
     width: 80%;
     font-family: Quicksand_500Medium;
@@ -48,9 +52,10 @@ export const CancelButton = styled(ResendCode)`
 
 export const CancelLessMargin = styled(CancelButton)`
     margin-top: 2px;
+    margin-bottom: 15px;
+    align-self: center;
+    justify-self: center;
 `
-
-
 export const CancelButtonRecords = styled(CancelButton)`
     margin-top:25px;
     margin-bottom: 40px;
@@ -72,7 +77,13 @@ export const DoctorArea = styled(DescripritionForgot)`
     /* border: 1px solid black; */
 `
 
+export const LocalizationText = styled(DoctorArea)`
+    font-family: "QuickSand_600SemiBold";
+`
+
 export const RoutineTextCard = styled(AgeTextCard)`
+    margin-top: 6px;
+    height: 20px;
     color: #8C8A97;
 `
 
@@ -83,12 +94,12 @@ export const HourText = styled.Text`
     font-size: 14px;
     font-family: Quicksand_600SemiBold;
 `
-
-export const HourTextGrey = styled(HourText)`
+export const HourTextGray = styled(HourText)`
     color: #4E4B59;
 `
 
 export const CancelCard = styled.Text`
+    margin-top: 3%;
     /* margin-left: 32%; */
     font-family: MontserratAlternates_500Medium;
     color: #C81D25;
@@ -97,4 +108,18 @@ export const CancelCard = styled.Text`
 
 export const SeeMedicalRecord = styled(CancelCard)`
     color: #344F8F;
+`
+export const DescriptionCancel = styled.Text`
+    margin-top: 15px;
+    width: 90%;
+    font-size: 16px;
+    font-family: Quicksand_500Medium;
+    color: #4E4B59;
+    text-align: center;
+`
+
+export const RateText = styled.Text`
+    font-size: 14px;
+    font-family: QuickSand_600SemiBold;
+    color: #F9A620;
 `

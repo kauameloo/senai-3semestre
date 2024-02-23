@@ -50,6 +50,8 @@ export const BoxDataHome = styled.SafeAreaView`
 
     align-items: center;
 
+    margin-left: 10px;
+
     
     margin-top: 26%; 
     
@@ -68,7 +70,7 @@ export const MoveIconBell = styled.SafeAreaView`
 
     width: 35px; 
     height: 35px;
-    margin-top:9%;
+    margin-top:8%;
 
   
    align-items: center;
@@ -82,30 +84,47 @@ export const ButtonHomeContainer = styled.SafeAreaView`
     gap: 15px;
 `
 
+export const ButtonHomeContainerStet = styled.SafeAreaView`
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+`
+
 export const BoxCard = styled.SafeAreaView`
     flex-direction: row;
     width: 100%;
+
     /* border: 1px solid black; */
     align-items: flex-start;
-
 `
 export const BoxTextCard = styled.SafeAreaView`
     flex-direction: column;
     width: 100%;
     height: 100%;
-
 `
 export const BoxTextDoctorCard = styled(BoxTextCard)`
     margin-left: 10px;
 `
+export const BoxTextClinicCard = styled(BoxTextCard)`
+    margin-left: 10px;
+    gap: 8px;
+    margin-top: -8px
+`
+
+
+export const BoxRateTime = styled.SafeAreaView`
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+    /* border: 1px solid black; */
+    margin-left: -39%;
+`
 
 export const BoxDateCancel = styled.SafeAreaView`
     width: 71%;
+    height: 30px;
     justify-content: space-between;
-    height: 35px;
-    flex-direction: row;
-
-
+    flex-direction: row; 
 `
 export const FlatContainer = styled.FlatList`
 width: 100%;
@@ -113,5 +132,5 @@ width: 100%;
 
 export const FlatContainerSelect = styled(FlatContainer)`
 width: 100%;
-height: 330px;
+height: 550px;
 `

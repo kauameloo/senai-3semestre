@@ -1,4 +1,4 @@
-import { InputLabel } from "./StyleLabel"
+import { InputLabel, InputLabel14 } from "./StyleLabel"
 
 export const Label = ({ textLabel }) => {
 

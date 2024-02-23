@@ -2,16 +2,19 @@ import styled, { css } from "styled-components";
 
 
 export const CardContainer = styled.SafeAreaView`
+    margin-top: 12px;
+    align-self: center;
+    align-itens: center;
     background-color: #fff;
     border-radius: 5px;
     padding: 10px;
-    margin-top: 18px;
     width: 90%;
     height: 105px;
     flex-direction: row;
-    align-self: center;
-    align-items: center;
+`
 
+export const CardContainerClinic = styled(CardContainer)`
+    height: 85px;
 `
 
 export const AgeCard = styled.SafeAreaView`
@@ -23,6 +26,14 @@ export const AgeCard = styled.SafeAreaView`
     box-radius: 5px;
     align-items: center;
     justify-content: center;
+`
+export const BoxRate = styled.SafeAreaView`
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-left:65px;
+    height: 22px;
+    width: 45px;
 `
 
 // export const CardSelectDoctorContainer = styled(CardContainer)`

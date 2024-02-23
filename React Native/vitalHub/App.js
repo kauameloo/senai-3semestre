@@ -15,6 +15,8 @@ import { MedicalRecords } from './src/screens/MedicalRecords/MedicalRecords';
 import { DoctorConsultation } from './src/screens/DoctorConsultation/DoctorConsultation';
 import { SelectDoctor } from './src/screens/SelectDoctor/SelectDoctor';
 import { SelectCLinic } from './src/screens/SelectClinic/SelectClinic';
+import { PatientConsultation } from './src/screens/PatientConsultation/PatientConsultation';
+import { SelectDate } from './src/screens/SelectDate/SelectDate';
 
 
 const Stack = createNativeStackNavigator();
@@ -45,7 +47,7 @@ export default function App() {
 
     <NavigationContainer>
 
-      <StatusBar translucent backgroundColor="transparent"  />
+      <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
 
       <Stack.Navigator screenOptions={{
         headerShown: false
@@ -115,6 +117,18 @@ export default function App() {
           name="SelectClinic"
           component={SelectCLinic}
           options={{ title: 'SelectClinic' }}
+        />
+
+        <Stack.Screen
+          name="PatientConsultation"
+          component={PatientConsultation}
+          options={{ title: 'PatientConsultation' }}
+        />
+
+        <Stack.Screen
+          name="SelectDate"
+          component={SelectDate}
+          options={{ title: 'SelectDate' }}
         />
 
       </Stack.Navigator>

@@ -32,33 +32,28 @@ export const SelectDoctor = () => {
 
     return (
 
-        <ScrollContainer>
+
+
+        <Container>
             <StatusBar translucent backgroundColor="transparent" barStyle="dark-content" />
 
-            <Container>
+            <TitleSelect>Selecionar Médico</TitleSelect>
 
-                <TitleSelect>Selecionar Médico</TitleSelect>
+            <FlatContainerSelect
+                data={dataItens}
+                renderItem={({ item }) =>
+                    <CardSelectDoctor doctorArea={item.doctorArea} name={item.name} url={image} />}
+                keyExtractor={item => item.id}
 
-                <FlatContainerSelect
-                    data={dataItens}
-                    renderItem={({ item }) =>
-                        <CardSelectDoctor doctorArea={item.doctorArea} name={item.name} url={image}/>}
-                    keyExtractor={item => item.id}
-                />
+                showsVerticalScrollIndicator={false}
+            />
 
-                {/* <CardSelectDoctor doctorArea={'Dermatóloga, Esteticista'} url={require('../../assets/DermaImage.png')} name={'Dr Alessandra'} />
+            <ButtonLargeSelect text={"Continuar"} />
 
-                <CardSelectDoctor doctorArea={'Cirurgião, Cardiologista'} url={require('../../assets/DermaImage.png')} name={'Dr Kumushiro'} />
+            <CancelLessMargin>Cancelar</CancelLessMargin>
 
-                <CardSelectDoctor doctorArea={'Clínico, Pediatra'} url={require('../../assets/DermaImage.png')} name={'Dr Rodrigo Santos'} /> */}
+        </Container>
 
-                <ButtonLargeSelect text={"Continuar"} />
-
-                <CancelLessMargin>Cancelar</CancelLessMargin>
-
-            </Container>
-
-        </ScrollContainer>
 
     )
 

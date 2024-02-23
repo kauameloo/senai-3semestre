@@ -9,9 +9,9 @@ export const ConsultDate = styled.SafeAreaView`
     border-radius: 5px;
     background-color: #E8FCFD;
     width: 100px;
-    height: 26px;
+    height: 30px;
 `
 
-export const ConsultDateGrey = styled(ConsultDate)`
+export const ConsultDateGray = styled(ConsultDate)`
     background-color: #F1F0F5;
 `

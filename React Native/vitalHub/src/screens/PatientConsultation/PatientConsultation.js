@@ -1,5 +1,5 @@
 import { StatusBar } from "react-native"
-import { BoxDataHome, BoxHome, ButtonHomeContainer, Container, FlatContainer, MoveIconBell, ScrollContainer } from "../../components/Container/StyleContainer"
+import { BoxDataHome, BoxHome, ButtonHomeContainer, Container, FlatContainer, MoveIconBell } from "../../components/Container/StyleContainer"
 import { Header } from "../../components/Header/StyledHeader"
 import { ImagemHome } from "../../components/Images/StyleImages"
 import { NameTitle, WelcomeTitle } from "../../components/Title/Title"
@@ -10,11 +10,13 @@ import { FilterButton } from "../../components/Button/Button"
 import { useState } from "react"
 import { Card } from "../../components/Cards/Cards"
 import { CancellationModal } from "../../components/CancellationModal/CancellationModal"
-import { AppointmentModal } from "../../components/AppointmentModal/AppointmentModal"
+
+import { FontAwesome6 } from '@expo/vector-icons';
+import { Stethoscope } from "../../components/Stethoscope/StyleSthetoscope"
+import { ModalStethoscope } from "../../components/Stethoscope/ModalStethoscope"
 
 
-
-export const DoctorConsultation = () => {
+export const PatientConsultation = () => {
 
     //STATE PARA O ESTADO DOS CARDS FLATLIST, BOTOES FILTRO
     const [selected, setSelected] = useState({
@@ -23,7 +25,7 @@ export const DoctorConsultation = () => {
         canceladas: false,
     });
 
-    const image = require("../../assets/ImageCard.png");
+    const image = require("../../assets/CardDoctorImage.png");
 
     // CARD MOCADOS
 
@@ -32,28 +34,10 @@ export const DoctorConsultation = () => {
             id: 1,
             hour: '14:00',
             image: image,
-            name: 'Niccole Sarga',
+            name: 'Dr Claudio',
             age: '22 anos',
-            routine: 'Rotina',
-            status: "r"
-        },
-        {
-            id: 2,
-            hour: '15:00',
-            image: image,
-            name: 'Richard Kosta',
-            age: '28 anos',
             routine: 'Urgência',
             status: "a"
-        },
-        {
-            id: 3,
-            hour: '17:00',
-            image: image,
-            name: 'Neymar Jr',
-            age: '28 anos',
-            routine: 'Rotina',
-            status: "c"
         }
     ]
 
@@ -78,23 +62,25 @@ export const DoctorConsultation = () => {
 
     const [showModalCancel, setShowModalCancel] = useState(false);
     const [showModalAppointment, setShowModalAppointment] = useState(false);
+    const [showModalStethoscope, setShowModalStethoscope] = useState(false);
 
     // RETURN
 
     return (
+
         <Container>
-                <StatusBar translucent backgroundColor="transparent" />
             <Header>
 
+                <StatusBar translucent backgroundColor="transparent" />
 
                 <BoxHome>
 
-                    <ImagemHome source={require('../../assets/DoctorImage.png')} />
+                    <ImagemHome source={require('../../assets/PatientHomeImage.png')} />
 
                     <BoxDataHome>
                         <WelcomeTitle textTitle={"Bem vindo"} />
 
-                        <NameTitle textTitle={"Dr. Claudio"} />
+                        <NameTitle textTitle={"Richard Kosta"} />
                     </BoxDataHome>
 
                 </BoxHome>
@@ -129,25 +115,32 @@ export const DoctorConsultation = () => {
 
             />
 
+            <Stethoscope onPress={() => setShowModalStethoscope(true)}>
+
+                <FontAwesome6
+                    name="stethoscope"
+                    size={32}
+                    color={"white"}
+                />
+
+            </Stethoscope>
+
             <CancellationModal
                 visible={showModalCancel}
                 setShowModalCancel={setShowModalCancel}
             />
 
-            <AppointmentModal
-                visible={showModalAppointment}
-                setShowModalAppointment={setShowModalAppointment}
+            <ModalStethoscope
+                visible={showModalStethoscope}
+                setShowModalStethoscope={setShowModalStethoscope}
             />
 
-
-            {/* <Card url={require('../../assets/ImageCard.png')} name={"Niccole Sarge"} age={"22 anos"} routine={"Rotina"} hour={"14:00"}/>
-
-                <Card url={require('../../assets/ImageCardMale.png')} name={"Richard Kosta"} age={"28 anos"} routine={"Urgência"} hour={"15:00"}/>
-
-                <Card url={require('../../assets/ney.webp')} name={"Neymar Jr"} age={"33 anos"} routine={"Rotina"} hour={"17:00"}/> */}
+            {/* <AppointmentModal 
+                visible={showModalAppointment}
+                setShowModalAppointment={setShowModalAppointment}
+            />  */}
 
         </Container>
-
 
     )
 }

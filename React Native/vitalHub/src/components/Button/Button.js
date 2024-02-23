@@ -1,5 +1,6 @@
-import { ButtonText, ButtonTextGoogle, ButtonTextHome, WhiteButtonText } from "../ButtonText/StyleButtonText";
-import { ButtonBlocked, ButtonHome, GoogleButton, LargeButton, LargeButtonModal, LargeButtonSelect, NormalButton, SmallButtonBlocked, WhiteButtonHome } from "./StyleButton";
+import { ButtonText, ButtonTextGoogle, ButtonTextHome, WhiteButtonText, WhiteButtonTextStet } from "../ButtonText/StyleButtonText";
+import { Label } from "../Label/Label";
+import { ButtonBlocked, ButtonHome, ButtonHomeStet, GoogleButton, LargeButton, LargeButtonSelect, NormalButton, SmallButtonBlocked, WhiteButtonHome, WhiteButtonHomeStet } from "./StyleButton";
 import { AntDesign } from '@expo/vector-icons';
 
 export const ButtonNormal = ({
@@ -9,7 +10,7 @@ export const ButtonNormal = ({
     return (
         <NormalButton
             onPress={onPress}>
-                <ButtonText>{text}</ButtonText>
+            <ButtonText>{text}</ButtonText>
         </NormalButton>
     );
 }
@@ -21,8 +22,8 @@ export const ButtonGoogle = ({
     return (
         <GoogleButton
             onPress={onPress}>
-                <AntDesign name="google" size={18} color="#496BBA" />
-                <ButtonTextGoogle>{text}</ButtonTextGoogle>
+            <AntDesign name="google" size={18} color="#496BBA" />
+            <ButtonTextGoogle>{text}</ButtonTextGoogle>
         </GoogleButton>
     );
 }
@@ -34,20 +35,8 @@ export const ButtonLarge = ({
     return (
         <LargeButton
             onPress={onPress}>
-                <ButtonText>{text}</ButtonText>
+            <ButtonText>{text}</ButtonText>
         </LargeButton>
-    );
-}
-
-export const ButtonLargeModal = ({
-    onPress,
-    text
-}) => {
-    return (
-        <LargeButtonModal
-            onPress={onPress}>
-                <ButtonText>{text}</ButtonText>
-        </LargeButtonModal>
     );
 }
 
@@ -58,7 +47,7 @@ export const ButtonLargeSelect = ({
     return (
         <LargeButtonSelect
             onPress={onPress}>
-                <ButtonText>{text}</ButtonText>
+            <ButtonText>{text}</ButtonText>
         </LargeButtonSelect>
     );
 }
@@ -70,7 +59,7 @@ export const BlockedButton = ({
     return (
         <ButtonBlocked
             onPress={onPress}>
-                <ButtonText>{text}</ButtonText>
+            <ButtonText>{text}</ButtonText>
         </ButtonBlocked>
     );
 }
@@ -82,19 +71,31 @@ export const BlockedSmallButton = ({
     return (
         <SmallButtonBlocked
             onPress={onPress}>
-                <ButtonText>{text}</ButtonText>
+            <ButtonText>{text}</ButtonText>
         </SmallButtonBlocked>
     );
 }
 
-export const FilterButton = ({selected = false, text, onPress = null}) => {
-    return(
+export const FilterButton = ({ selected = false, text, onPress = null }) => {
+    return (
         <>
-             {selected ?  
-            <ButtonHome selected={selected} onPress={onPress}><ButtonTextHome>{text}</ButtonTextHome></ButtonHome>
-             : 
-            <WhiteButtonHome selected={selected} onPress={onPress}><WhiteButtonText>{text}</WhiteButtonText></WhiteButtonHome>
-             } 
+            {selected ?
+                <ButtonHome selected={selected} onPress={onPress}><ButtonTextHome>{text}</ButtonTextHome></ButtonHome>
+                :
+                <WhiteButtonHome selected={selected} onPress={onPress}><WhiteButtonText>{text}</WhiteButtonText></WhiteButtonHome>
+            }
+        </>
+    )
+}
+
+export const FilterButtonStet = ({ selected = false, text, onPress = null }) => {
+    return (
+        <>
+            {selected ?
+                <ButtonHomeStet selected={selected} onPress={onPress}><ButtonTextHome>{text}</ButtonTextHome></ButtonHomeStet>
+                :
+                <WhiteButtonHomeStet selected={selected} onPress={onPress}><WhiteButtonTextStet>{text}</WhiteButtonTextStet></WhiteButtonHomeStet>
+            }
         </>
     )
 }
