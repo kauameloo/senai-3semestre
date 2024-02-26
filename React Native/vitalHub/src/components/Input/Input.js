@@ -2,6 +2,7 @@ import { StyleSheet, View } from "react-native";
 import { InputHigh, InputNumeric, InputProfile, InputText, InputTextLarge } from "./StyleInput";
 import RNPickerSelect from 'react-native-picker-select';
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 
 // import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
@@ -49,9 +50,9 @@ export const InputSelect = () => {
         <View style={{ width: 316 }}>
             <RNPickerSelect
                 style={style}
-                // Icon={() => {
-                //     return <FontAwesomeIcon icon={faCaretDown} color='#34898F' size={22} />
-                // }}
+                Icon={() => {
+                    return <FontAwesomeIcon icon={faCaretDown} color='#34898F' size={22} />
+                }}
                 placeholder={{
                     label: 'Selecione um valor',
                     value: null,

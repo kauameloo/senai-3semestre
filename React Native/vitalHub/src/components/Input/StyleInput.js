@@ -31,7 +31,7 @@ export const InputProfile = styled.TextInput`
 background-color: #F5F3F3;
 padding-left: 15px;
 text-align: left;
-width:90%;
+/* width:90%; */
 height: 55px;
 border:1px solid #F5F3F3;
 font-family: MontserratAlternates_500Medium;
@@ -45,9 +45,9 @@ font-size: 16px;
 export const InputHigh = styled(InputText)`
     padding-bottom: 82px;
     height: 125px;
-    width: 90%;
+    width: 100%;
 `
 
 export const InputTextLarge = styled(InputText)`
-    width: 90%;
+    width: 100%;
 `

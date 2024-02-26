@@ -78,7 +78,7 @@ export const DoctorArea = styled(DescripritionForgot)`
 `
 
 export const LocalizationText = styled(DoctorArea)`
-    font-family: "QuickSand_600SemiBold";
+    font-family: "Quicksand_600SemiBold";
 `
 
 export const RoutineTextCard = styled(AgeTextCard)`

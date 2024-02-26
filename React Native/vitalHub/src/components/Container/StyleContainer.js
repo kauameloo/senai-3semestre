@@ -108,7 +108,7 @@ export const BoxTextDoctorCard = styled(BoxTextCard)`
 export const BoxTextClinicCard = styled(BoxTextCard)`
     margin-left: 10px;
     gap: 8px;
-    margin-top: -8px
+    margin-top: -8px;
 `
 
 
@@ -133,4 +133,9 @@ width: 100%;
 export const FlatContainerSelect = styled(FlatContainer)`
 width: 100%;
 height: 550px;
+`
+
+export const BoxInputSelectLabel = styled.SafeAreaView`
+    margin-top: 30px;
+    gap: 10px;
 `

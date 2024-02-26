@@ -65,3 +65,9 @@ export const NameCardSelect = styled.Text`
 export const NameCardClinic = styled(NameCardSelect)`
     margin-top: 3%;
 `
+
+export const TitleLocalization = styled(Title)`
+    color: #000000;
+    margin-top: 25px;
+    margin-bottom: 7px
+`

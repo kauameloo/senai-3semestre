@@ -77,3 +77,11 @@ export const LargeButtonSelect = styled(LargeButton)`
     margin-top: 30px;
     margin-bottom: 25px;
 `
+
+export const BoxButtons = styled.SafeAreaView`
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 42px;
+`
