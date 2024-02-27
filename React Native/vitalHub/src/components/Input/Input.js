@@ -1,5 +1,5 @@
 import { StyleSheet, View } from "react-native";
-import { InputHigh, InputNumeric, InputProfile, InputText, InputTextLarge } from "./StyleInput";
+import { InputHigh, InputHighGrey, InputNumeric, InputProfile, InputText, InputTextLarge } from "./StyleInput";
 import RNPickerSelect from 'react-native-picker-select';
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
@@ -163,6 +163,30 @@ export function HighInput({
 }) {
     return (
         <InputHigh
+            editable={editable}
+            placeholder={placeholder}
+            keyboardType={keyboardType}
+            placeholderTextColor={placeholderTextColor}
+            maxLength={maxLength}
+            value={fieldValue}
+            onChangeText={onChangeText}
+            secureTextEntry={secureTextEntry}
+        />
+    )
+}
+
+export function HighInputGrey({
+    placeholder,
+    fieldValue,
+    onChangeText,
+    keyboardType,
+    maxLength,
+    placeholderTextColor,
+    editable = true,
+    secureTextEntry = false
+}) {
+    return (
+        <InputHighGrey
             editable={editable}
             placeholder={placeholder}
             keyboardType={keyboardType}

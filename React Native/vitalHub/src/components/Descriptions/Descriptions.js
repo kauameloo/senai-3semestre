@@ -1,5 +1,5 @@
 import { ViewBoxCode } from "../Container/StyleContainer";
-import {CancelCard, CancelLessMargin, DescripritionEmail, DescripritionForgot, EmailText, ResendCode, SeeMedicalRecord } from "./StyledDescriptions";
+import {CancelCard, CancelLessMargin, DescripritionDoctor, DescripritionEmail, DescripritionForgot, EmailText, ResendCode, SeeMedicalRecord } from "./StyledDescriptions";
 
 export const DescriptionPassword = ({ description }) => {
 
@@ -7,6 +7,15 @@ export const DescriptionPassword = ({ description }) => {
         <DescripritionForgot>
             {description}
         </DescripritionForgot>
+    )
+}
+
+export const DescriptionDoc = ({ description }) => {
+
+    return (
+        <DescripritionDoctor>
+            {description}
+        </DescripritionDoctor>
     )
 }
 

@@ -36,9 +36,18 @@ export const ContainerCepCidade = styled.SafeAreaView`
 export const BoxAgeEmail = styled.SafeAreaView`
     flex-direction: row;
     justify-content: space-around;
+    border: 1px solid red;
     margin-top: 2px;
     margin-right: 35px;
     margin-left: 35px;
+`
+
+export const BoxDescription = styled.SafeAreaView`
+    flex-direction: row;
+    margin-top: 2px;
+    margin-right: 35px;
+    margin-left: 35px;
+    gap: 20px;
 `
 
 export const BoxDataHome = styled.SafeAreaView`
@@ -138,4 +147,19 @@ height: 550px;
 export const BoxInputSelectLabel = styled.SafeAreaView`
     margin-top: 30px;
     gap: 10px;
+`
+
+export const ViewImageImport = styled.SafeAreaView`
+    width: 100%;
+    height: 111px;
+    background-color: #F5F3F3;
+    border-radius: 5px;
+
+`
+
+export const BoxViewImageImport = styled.SafeAreaView`
+    margin-top: 20px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
 `

@@ -47,6 +47,11 @@ export const InputHigh = styled(InputText)`
     height: 125px;
     width: 100%;
 `
+export const InputHighGrey = styled(InputHigh)`
+    border:1px solid #F5F3F3;
+    color: #33303E;
+    background-color: #F5F3F3;
+`
 
 export const InputTextLarge = styled(InputText)`
     width: 100%;

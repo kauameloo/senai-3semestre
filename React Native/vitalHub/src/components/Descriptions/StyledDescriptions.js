@@ -12,6 +12,17 @@ export const DescripritionForgot = styled.Text`
     align-self: center;
 `
 
+export const DescripritionDoctor = styled.Text`
+    /* width: 80%; */
+    font-family: Quicksand_500Medium;
+    font-size: 16px;
+    color: #5F5C6B;
+    text-align: center;
+    /* margin-top: 2px; */
+    /* margin-bottom: 15px; */
+    align-self: center;
+`
+
 export const DescriptionModalRecord = styled(DescripritionForgot)`
     font-size: 14px;
 `
