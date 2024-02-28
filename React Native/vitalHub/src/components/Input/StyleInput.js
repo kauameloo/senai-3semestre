@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const InputText = styled.TextInput`
-width:80%;
+width:90%;
 border:2px solid #49B3BA;
 font-family: MontserratAlternates_600SemiBold;
 color: #49B3BA;
@@ -51,6 +51,7 @@ export const InputHighGrey = styled(InputHigh)`
     border:1px solid #F5F3F3;
     color: #33303E;
     background-color: #F5F3F3;
+    font-family: MontserratAlternates_500Medium;
 `
 
 export const InputTextLarge = styled(InputText)`

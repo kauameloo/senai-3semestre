@@ -7,10 +7,12 @@ import { Label, LabelSelect } from "../../components/Label/Label"
 import { ButtonLarge, ButtonNormal } from "../../components/Button/Button"
 import { CardCancelLess } from "../../components/Descriptions/Descriptions"
 import { BoxButtons } from "../../components/Button/StyleButton"
+import { useState } from "react"
+import { ConfirmAppointmentModal } from "../../components/ConfirmAppointmentModal/ConfirmAppointmentModal"
 
 
 export const SelectDate = () => {
-
+    const [showModal, setShowModal] = useState(false);
     return (
 
         <Container>
@@ -28,10 +30,16 @@ export const SelectDate = () => {
 
 
             <BoxButtons>
-                <ButtonLarge text={'Confirmar'} />
+                <ButtonLarge onPress={() => setShowModal(true)} text={'Confirmar'} />
 
                 <CardCancelLess text={"Cancelar"} />
             </BoxButtons>
+
+            <ConfirmAppointmentModal
+                visible={showModal}
+                setShowModal={setShowModal}
+            />
+
         </Container>
 
     )

@@ -12,6 +12,14 @@ export const DescripritionForgot = styled.Text`
     align-self: center;
 `
 
+export const DescriptionConfirmModal = styled(DescripritionForgot)`
+    width: 90%;
+    margin-top: 0px;
+    font-size: 17px;
+    margin-bottom: 0px;
+    color: #000000;
+`
+
 export const DescripritionDoctor = styled.Text`
     /* width: 80%; */
     font-family: Quicksand_500Medium;
@@ -45,6 +53,8 @@ export const EmailText = styled.Text`
 
 `
 
+
+
 export const ResendCode = styled(EmailText)`
     text-decoration: underline;
     color: #344F8F;
@@ -67,6 +77,16 @@ export const CancelLessMargin = styled(CancelButton)`
     align-self: center;
     justify-self: center;
 `
+
+export const CancelBackMargin = styled(CancelButton)`
+    margin-top: 30px;
+    margin-bottom: 42px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+`
+
+
 export const CancelButtonRecords = styled(CancelButton)`
     margin-top:25px;
     margin-bottom: 40px;
@@ -133,4 +153,22 @@ export const RateText = styled.Text`
     font-size: 14px;
     font-family: QuickSand_600SemiBold;
     color: #F9A620;
+`
+
+export const SmallDescriptionModal2 = styled(DescripritionForgot)`
+    font-size: 13px;
+    align-self: flex-start;
+    color: #5F5C6B;
+    width: 100%;
+    text-align: none;
+    margin-bottom: 0px;
+`
+
+export const SmallDescriptionModal = styled(DescripritionForgot)`
+    font-size: 13px;
+    align-self: flex-start;
+    color: #5F5C6B;
+    width: 100%;
+    text-align: none;
+    margin-bottom: 20px;
 `

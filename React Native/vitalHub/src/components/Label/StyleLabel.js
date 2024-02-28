@@ -13,3 +13,11 @@ color:#33303E;
 export  const InputSelectLabel = styled(InputLabel)`
     margin-left: 0;
 `
+
+export const LabelDescription = styled.Text`
+    font-size: 16px;
+    font-family: Quicksand_600SemiBold;
+
+    width: 100%;
+    color:#33303E;
+`

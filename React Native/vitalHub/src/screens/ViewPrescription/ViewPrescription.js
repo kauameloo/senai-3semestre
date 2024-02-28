@@ -1,9 +1,12 @@
-import { BoxAgeEmail, BoxDescription, BoxViewImageImport, Container, ScrollContainer, ViewImageImport } from "../../components/Container/StyleContainer"
-import { DescriptionDoc, DescriptionPassword } from "../../components/Descriptions/Descriptions"
+import { SendButton } from "../../components/Button/Button"
+import { ButtonSend } from "../../components/Button/StyleButton"
+import { BoxAgeEmail, BoxBtn, BoxDescription, BoxViewImageImport, Container, ScrollContainer, ViewImageImport } from "../../components/Container/StyleContainer"
+import { CardBackLess, CardCancel, CardCancelLess, DescriptionDoc, DescriptionPassword } from "../../components/Descriptions/Descriptions"
 import { ViewImage } from "../../components/Images/StyleImages"
 import { HighInputBox, HighInputBoxGrey, InputBox, LargeInputTextBox } from "../../components/InputBox/InputBox"
 import { Label } from "../../components/Label/Label"
 import { TitleProfile } from "../../components/Title/StyleTitle"
+import { Line } from "./style"
 
 export const ViewPrescription = () => {
     return (
@@ -52,6 +55,22 @@ export const ViewPrescription = () => {
                         <ViewImageImport />
                     </BoxViewImageImport>
 
+                    <BoxBtn>
+                        <SendButton text={"Enviar"} />
+                        <CardCancel text={"Cancelar"} />
+                    </BoxBtn>
+
+                    <Line/>
+
+                    <HighInputBoxGrey
+                        // fieldHeight={350}
+                        placeholderTextColor={"#A1A1A1"}
+                        placeholder={"Resultado do exame"}
+                        editable={true}
+                        fieldWidth={90}
+                    />
+
+                    <CardBackLess text={"Voltar"}/>
 
                 </Container>
 

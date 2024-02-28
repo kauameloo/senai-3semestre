@@ -1,7 +1,8 @@
-import { ButtonText, ButtonTextGoogle, ButtonTextHome, WhiteButtonText, WhiteButtonTextStet } from "../ButtonText/StyleButtonText";
+import { ButtonSendText, ButtonText, ButtonTextGoogle, ButtonTextHome, WhiteButtonText, WhiteButtonTextStet } from "../ButtonText/StyleButtonText";
 import { Label } from "../Label/Label";
-import { ButtonBlocked, ButtonHome, ButtonHomeStet, GoogleButton, LargeButton, LargeButtonSelect, NormalButton, SmallButtonBlocked, WhiteButtonHome, WhiteButtonHomeStet } from "./StyleButton";
+import { ButtonBlocked, ButtonHome, ButtonHomeStet, ButtonSend, GoogleButton, LargeButton, LargeButtonConfirmModal, LargeButtonSelect, NormalButton, SmallButtonBlocked, WhiteButtonHome, WhiteButtonHomeStet } from "./StyleButton";
 import { AntDesign } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export const ButtonNormal = ({
     onPress,
@@ -12,6 +13,19 @@ export const ButtonNormal = ({
             onPress={onPress}>
             <ButtonText>{text}</ButtonText>
         </NormalButton>
+    );
+}
+
+export const SendButton = ({
+    onPress,
+    text
+}) => {
+    return (
+        <ButtonSend
+            onPress={onPress}>
+            <MaterialCommunityIcons name="camera-plus-outline" size={24} color="white" />
+            <ButtonSendText>{text}</ButtonSendText>
+        </ButtonSend>
     );
 }
 
@@ -98,4 +112,16 @@ export const FilterButtonStet = ({ selected = false, text, onPress = null }) => 
             }
         </>
     )
+}
+
+export const ButtonLargeConfirmModal = ({
+    onPress,
+    text
+}) => {
+    return (
+        <LargeButtonConfirmModal
+            onPress={onPress}>
+                <ButtonText>{text}</ButtonText>
+        </LargeButtonConfirmModal>
+    );
 }

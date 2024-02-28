@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 export const NormalButton = styled.TouchableOpacity`
     margin-top: 32px;
     border-radius: 8px;
-    width: 80%;
+    width: 90%;
     background-color: #496BBA;
     height: 60px;
     align-items: center;
@@ -12,6 +12,21 @@ export const NormalButton = styled.TouchableOpacity`
     border-width: 1px;
     border-color: #496BBA;
     `
+
+export const ButtonSend = styled.TouchableOpacity`
+/* margin-top: 32px; */
+border-radius: 5px;
+width: 172px;
+background-color: #49B3BA;
+height: 48px;
+align-items: center;
+justify-content: center;
+border-width: 1px;
+border-color: #49B3BA;
+flex-direction: row;
+gap: 10px;
+`
+
 
 export const GoogleButton = styled(NormalButton)`
     margin-top: 20px; 
@@ -84,4 +99,11 @@ export const BoxButtons = styled.SafeAreaView`
     align-items: center;
 
     margin-top: 42px;
+`
+
+export const LargeButtonConfirmModal = styled(LargeButton)`
+    width: 100%;
+    height: 50px;
+    margin-top: 4%;
+    margin-bottom: 25px;
 `

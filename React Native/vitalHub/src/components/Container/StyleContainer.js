@@ -11,7 +11,7 @@ export const ViewBoxMedium = styled.SafeAreaView`
     align-items: flex-start;
 `
 export const BoxNumeric = styled.SafeAreaView`
-    width: 80%;
+    width: 90%;
     flex-direction: row;
     margin-top: 15px;
     justify-content: space-between;
@@ -28,15 +28,14 @@ export const ContainerCepCidade = styled.SafeAreaView`
     width: 100%;
     background-color: #fafafa;
     flex-direction: row;
-    justify-content: space-evenly;
-    gap: 50px;
+    justify-content: space-around;
+    /* gap: 50px; */
     margin-bottom: 35px;
 `
 
 export const BoxAgeEmail = styled.SafeAreaView`
     flex-direction: row;
     justify-content: space-around;
-    border: 1px solid red;
     margin-top: 2px;
     margin-right: 35px;
     margin-left: 35px;
@@ -162,4 +161,14 @@ export const BoxViewImageImport = styled.SafeAreaView`
     width: 90%;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+`
+
+export const BoxBtn = styled.SafeAreaView`
+    margin-top: 10px;
+    flex-direction: row;
+    /* gap: 60px; */
+    width: 90%;
+    /* justify-content: space-around; */
+    gap: 80px;
 `

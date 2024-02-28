@@ -7,6 +7,13 @@ export const ButtonText= styled.Text`
     color: #fff;
 `
 
+export const ButtonSendText= styled.Text`
+    text-transform: capitalize;
+    font-size: 15px;
+    font-family: MontserratAlternates_700Bold;
+    color: #fff;
+`
+
 export const ButtonTextGoogle = styled.Text`
     text-transform: uppercase;
     font-size: 15px;
