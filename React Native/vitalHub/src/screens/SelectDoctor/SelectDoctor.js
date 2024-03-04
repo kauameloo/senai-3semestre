@@ -6,7 +6,7 @@ import { ButtonLarge, ButtonLargeSelect } from "../../components/Button/Button"
 import { CancelLessMargin } from "../../components/Descriptions/StyledDescriptions"
 
 
-export const SelectDoctor = () => {
+export const SelectDoctor = ({navigation}) => {
 
     const image = require("../../assets/ImageCard.png");
     const dataItens = [
@@ -48,7 +48,7 @@ export const SelectDoctor = () => {
                 showsVerticalScrollIndicator={false}
             />
 
-            <ButtonLargeSelect text={"Continuar"} />
+            <ButtonLargeSelect onPress={() => { navigation.navigate("SelectDate") }} text={"Continuar"} />
 
             <CancelLessMargin>Cancelar</CancelLessMargin>
 

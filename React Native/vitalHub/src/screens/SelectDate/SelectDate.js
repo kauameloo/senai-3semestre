@@ -11,7 +11,7 @@ import { useState } from "react"
 import { ConfirmAppointmentModal } from "../../components/ConfirmAppointmentModal/ConfirmAppointmentModal"
 
 
-export const SelectDate = () => {
+export const SelectDate = ( {navigation} ) => {
     const [showModal, setShowModal] = useState(false);
     return (
 
@@ -36,6 +36,7 @@ export const SelectDate = () => {
             </BoxButtons>
 
             <ConfirmAppointmentModal
+                navigation={navigation}
                 visible={showModal}
                 setShowModal={setShowModal}
             />

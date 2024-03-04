@@ -6,9 +6,9 @@ import { ViewImage } from "../../components/Images/StyleImages"
 import { HighInputBox, HighInputBoxGrey, InputBox, LargeInputTextBox } from "../../components/InputBox/InputBox"
 import { Label } from "../../components/Label/Label"
 import { TitleProfile } from "../../components/Title/StyleTitle"
-import { Line } from "./style"
+import { Line, TitleImage } from "./Style"
 
-export const ViewPrescription = () => {
+export const ViewPrescription = ({ navigation }) => {
     return (
         <>
             <ScrollContainer>
@@ -51,8 +51,13 @@ export const ViewPrescription = () => {
                     />
 
                     <BoxViewImageImport>
+                        
                         <Label textLabel={"Exames médicos"} />
-                        <ViewImageImport />
+
+                        <ViewImageImport>
+                            <TitleImage>{"[ ! ] Nenhuma foto informada"}</TitleImage>
+                        </ViewImageImport>
+
                     </BoxViewImageImport>
 
                     <BoxBtn>
@@ -70,7 +75,7 @@ export const ViewPrescription = () => {
                         fieldWidth={90}
                     />
 
-                    <CardBackLess text={"Voltar"}/>
+                    <CardBackLess onPressCancel={() => { navigation.navigate("PatientConsultation") }} text={"Voltar"}/>
 
                 </Container>
 

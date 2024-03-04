@@ -77,12 +77,13 @@ export const ButtonHomeStet = styled(ButtonHome)`
 export const WhiteButtonHome = styled(ButtonHome)`
     background-color: #FBFBFB;
     border: 2px solid #607EC5;
-
+    height: 44px;
 `
 
 export const WhiteButtonHomeStet = styled(WhiteButtonHome)`
-    border: 1px solid #60BFC5;
+    border: 2px solid #60BFC5;
     width: 88px;
+    height: 40px;
     margin-top: 0;
     margin-bottom: 0;
 `

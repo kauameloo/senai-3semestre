@@ -47,8 +47,9 @@ export const InputSelect = () => {
     };
 
     return (
-        <View style={{ width: 316 }}>
+        <View style={{ width: 356 }}>
             <RNPickerSelect
+                useNativeAndroidPickerStyle={false}
                 style={style}
                 Icon={() => {
                     return <FontAwesomeIcon icon={faCaretDown} color='#34898F' size={22} />
@@ -98,7 +99,7 @@ const style = StyleSheet.create({
         fontFamily: 'MontserratAlternates_600SemiBold'
     },
     iconContainer: {
-        top: '25%',
+        top: '31%',
         marginRight: 10
     },
     placeholder: {
