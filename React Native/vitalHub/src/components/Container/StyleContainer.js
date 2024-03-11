@@ -70,7 +70,7 @@ export const BoxHome = styled.SafeAreaView`
   flex-direction: row;
 
   margin-bottom: 8%;
-  margin-right: 33%;
+  margin-right: 36%;
 `;
 
 export const MoveIconBell = styled.SafeAreaView`

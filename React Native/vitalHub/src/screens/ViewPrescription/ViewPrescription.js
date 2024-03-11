@@ -8,6 +8,7 @@ import { Label } from "../../components/Label/Label"
 import { TitleProfile } from "../../components/Title/StyleTitle"
 import { Line, TitleImage } from "./Style"
 
+
 export const ViewPrescription = ({ navigation }) => {
     return (
         <>
