@@ -4,8 +4,13 @@ import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 
 import {
-  requestForegroundPermissionsAsync,
-  getCurrentPositionAsync,
+  requestForegroundPermissionsAsync, //Solicita a permissao de localização
+  getCurrentPositionAsync, //Captura a localização atual
+
+  watchPositionAsync, //Captura em tempos a localização
+  LocationAccurac,
+  LocationAccuracy, //Precisão da captura
+
 } from "expo-location";
 
 import MapViewDirections from "react-native-maps-directions";
@@ -28,7 +33,16 @@ export default function App() {
 
   useEffect(() => {
     captureLocation();
-  }, []);
+
+    // Capturar localização em tempo real
+    watchPositionAsync({
+      accuracy : LocationAccuracy.High,
+      timeInterval : 1000,
+      distanceInterval : 1
+    }, async (response) => {
+      await setInitialPosition( response )
+    })
+  }, [1000]);
 
   if (!initialPosition) {
     return (
