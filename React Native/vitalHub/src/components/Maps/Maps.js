@@ -33,8 +33,8 @@ export const Maps = () => {
   if (!initialPosition) {
     return (
       <View style={styles.loadingContainer}>
-        <Text>Carregando...</Text>
-        <ActivityIndicator size="large" color="#0000ff" />
+        <Text>Carregando localização...</Text>
+        <ActivityIndicator size="small" color="gray" />
       </View>
     );
   }
@@ -58,7 +58,7 @@ export const Maps = () => {
       <MapView
         style={styles.map}
         provider={PROVIDER_GOOGLE}
-        customMapStyle={grayMapStyle}
+        // customMapStyle={grayMapStyle}
         initialRegion={{
           latitude: midpoint.latitude,
           longitude: midpoint.longitude,
@@ -71,7 +71,7 @@ export const Maps = () => {
           origin={origin}
           destination={destination}
           apikey={mapskey}
-          strokeColor="purple"
+          strokeColor="black"
           strokeWidth={3}
           timePrecision="now"
           optimizeWaypoints={true}
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   loadingContainer: {
     ...StyleSheet.absoluteFillObject,
     alignItems: "center",
-    // justifyContent: "center",
+    justifyContent: "center",
     width: "100%",
     // height: 300,
   },

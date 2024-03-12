@@ -1,6 +1,7 @@
 import {
   Container,
   ContainerCepCidade,
+  MapContainer,
 } from "../../components/Container/StyleContainer";
 import { CardCancelLessLocal } from "../../components/Descriptions/Descriptions";
 import { AgeTextCard } from "../../components/Descriptions/StyledDescriptions";
@@ -13,8 +14,9 @@ export const ConsultLocalization = ({ navigation }) => {
   return (
     <Container>
       {/* <MapImage source={require("../../assets/MapImage.png")} /> */}
-      <Maps />
-
+      <MapContainer>
+        <Maps />
+      </MapContainer>
       <TitleLocalization>Clínica Natureh</TitleLocalization>
 
       <AgeTextCard>São Paulo, SP</AgeTextCard>
