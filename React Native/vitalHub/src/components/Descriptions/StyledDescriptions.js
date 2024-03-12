@@ -70,7 +70,7 @@ export const CancelLessMargin = styled(CancelButton)`
   margin-top: 2px;
   margin-bottom: 30px;
   align-self: center;
-  justify-self: center;
+  /* justify-self: center; */
 `;
 
 export const CancelLocal = styled(CancelButton)`
@@ -111,7 +111,7 @@ export const DoctorArea = styled(DescripritionForgot)`
   height: 20px;
   width: 49%;
   align-self: flex-start;
-  text-align: flex-start;
+  text-align: left;
   /* border: 1px solid black; */
 `;
 
@@ -176,7 +176,7 @@ export const SmallDescriptionModal = styled(DescripritionForgot)`
   align-self: flex-start;
   color: #5f5c6b;
   width: 100%;
-  text-align: none;
+  /* text-align: none; */
   margin-bottom: 20px;
 `;
 
