@@ -29,6 +29,7 @@ import { ConsultLocalization } from "./src/screens/ConsultLocalization/ConsultLo
 import { ViewPrescription } from "./src/screens/ViewPrescription/ViewPrescription";
 import Splash from "./src/screens/Splash/Splash";
 import { DoctorMain, Main } from "./src/components/Main/Main";
+import Cam from "./src/components/Camera/Camera";
 
 const Stack = createNativeStackNavigator();
 
@@ -161,6 +162,7 @@ export default function App() {
           component={ViewPrescription}
           options={{ title: "ViewPrescription" }}
         />
+        <Stack.Screen name="Cam" component={Cam} options={{ title: "Cam" }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
