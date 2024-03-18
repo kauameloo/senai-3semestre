@@ -42,7 +42,14 @@
     "react-native-picker-select": "^9.0.1",
     "react-native-svg": "^14.1.0",
     "styled-components": "^6.1.8",
+<<<<<<< HEAD
     "expo-notifications": "~0.27.6"
+=======
+    "expo-location": "~16.5.5",
+    "react-native-maps": "1.10.0",
+    "expo-camera": "~14.1.1",
+    "expo-media-library": "~15.9.1"
+>>>>>>> f1a9de4d43f6f1a4e7e50ab579a8ce8b9edcd1c8
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
