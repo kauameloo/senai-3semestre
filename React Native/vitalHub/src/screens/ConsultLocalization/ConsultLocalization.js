@@ -1,22 +1,20 @@
 import {
   Container,
   ContainerCepCidade,
-  MapContainer,
 } from "../../components/Container/StyleContainer";
 import { CardCancelLessLocal } from "../../components/Descriptions/Descriptions";
 import { AgeTextCard } from "../../components/Descriptions/StyledDescriptions";
 import { MapImage } from "../../components/Images/StyleImages";
 import { InputBox } from "../../components/InputBox/InputBox";
-import { Maps } from "../../components/Maps/Maps";
+import Maps from "../../components/Maps/Maps";
 import { Title, TitleLocalization } from "../../components/Title/StyleTitle";
 
 export const ConsultLocalization = ({ navigation }) => {
   return (
     <Container>
-      {/* <MapImage source={require("../../assets/MapImage.png")} /> */}
-      <MapContainer>
-        <Maps />
-      </MapContainer>
+      
+      <Maps/>
+
       <TitleLocalization>Clínica Natureh</TitleLocalization>
 
       <AgeTextCard>São Paulo, SP</AgeTextCard>
@@ -54,6 +52,7 @@ export const ConsultLocalization = ({ navigation }) => {
         }}
         text={"Voltar"}
       />
+      
     </Container>
   );
 };

@@ -72,3 +72,16 @@ export const BrandLogoWhite = styled.Image`
     width:300px;
     height:150px;
   `
+
+export const ImagePrescriptionNull = styled.Image`
+    width: 220px;
+    height: 24px;
+    align-self: center;
+  `
+
+export const ImagePrescription = styled.Image`
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    align-self: center;
+`

@@ -189,9 +189,3 @@ export const ContentBar = styled.TouchableOpacity`
   /* height: 60px; */
   /* margin-bottom: 50px; */
 `;
-
-export const MapContainer = styled.SafeAreaView`
-  width: 100%;
-  /* border: 1px solid red; */
-  height: 400px;
-`;
