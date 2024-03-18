@@ -29,11 +29,7 @@ import { ConsultLocalization } from "./src/screens/ConsultLocalization/ConsultLo
 import { ViewPrescription } from "./src/screens/ViewPrescription/ViewPrescription";
 import Splash from "./src/screens/Splash/Splash";
 import { DoctorMain, Main } from "./src/components/Main/Main";
-<<<<<<< HEAD
 import Camera from "./src/components/Camera/Camera";
-=======
-import Cam from "./src/components/Camera/Camera";
->>>>>>> f1a9de4d43f6f1a4e7e50ab579a8ce8b9edcd1c8
 
 const Stack = createNativeStackNavigator();
 
@@ -166,15 +162,11 @@ export default function App() {
           component={ViewPrescription}
           options={{ title: "ViewPrescription" }}
         />
-<<<<<<< HEAD
         <Stack.Screen
           name="Camera"
           component={Camera}
           options={{ title: "Camera" }}
         />
-=======
-        <Stack.Screen name="Cam" component={Cam} options={{ title: "Cam" }} />
->>>>>>> f1a9de4d43f6f1a4e7e50ab579a8ce8b9edcd1c8
       </Stack.Navigator>
     </NavigationContainer>
   );
